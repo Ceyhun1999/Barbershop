@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+:root {
+    --white: #efe7e2;
+    --whiteNormal: #fff;
+    --brown: #3b322d;
+}
+
+/* stylization of header-top elements */
+header { background:  var(--brown) }
+.menu__link {
+    font: .9em 'Fira Sans', sans-serif;
+    color: var(--white);
+}
+.contacts__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.contacts__link { text-align: right }
+.contacts__link-adress {
+    font: .85em 'Fira Sans', sans-serif;
+    color: var(--white);
+}
+.contacts__link-phone span:first-of-type {
+    font: 1.1em 'Fira Sans', sans-serif;
+    color: var(--whiteNormal);
+}
+.contacts__link-phone span:last-of-type {
+    font: .9em 'Fira Sans', sans-serif;
+    color: var(--white);
+}
+.contacts__link span { display: block }
+
+/* styling burger menu elements */
+.bar { cursor: pointer }
+.bar-1, .bar-2, .bar-3 {
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fff;
+    transition: .4s;
+}
+.bar-active .bar-1 { transform: translateY(8px) rotate(45deg) }
+.bar-active .bar-3 { transform: translateY(-8px) rotate(-45deg) }
+.bar-active .bar-2 { opacity:0 }
+
+    
+    
+    
+
+@media only screen and (min-width: 768px) {
+    .container { 
+        max-width: 1180px;
+        padding: 0 20px;
+        margin: auto;
+    }
+
+    /* stylization of header elements */
+}
+
+@media only screen and (min-width: 1180px) {
+
+    /* stylization of header elements */
+    nav, .menu, .contacts-block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav { padding: 40px 0 40px 0 }
+    .menu, .contacts-block { gap: 30px }
+
+}

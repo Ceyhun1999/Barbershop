@@ -117,12 +117,11 @@ nav {
 }
 .header__content-inner {
     background: url('../img/headerBg.png') center/cover;
-    padding: 40px 10px 0 40px;
+    padding: 40px 10px 0 20px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    
 }
 .title {
     font: 900 2em 'Playfair Display', serif;
@@ -163,7 +162,6 @@ nav {
 /* stylization of main elements (first-section) */
 .first-section {
     background: var(--blackBrown);
-    min-height: 1000px;
     position: relative;
 }
 .row {
@@ -171,8 +169,10 @@ nav {
     max-width: 1180px;
     width: 100%;
     position: absolute;
+    padding-bottom: 20px;
 }
 .col {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,6 +188,50 @@ nav {
     font: 1em 'Fira Sans', sans-serif;
     color: #b7aaa2;
 }
+
+/* stylization of main elements (second-section) */
+.second-section {
+    background: var(--brown);
+    padding: 120px 0;
+}
+.second-section__title {
+    font: 700 1.5em 'Fira Sans', sans-serif;
+    color: var(--whiteNormal);
+    text-align: center;
+}
+.second-section__text {
+    font:  1em 'Fira Sans', sans-serif;
+    color: var(--white);
+    max-width: 560px;
+    text-align: center;
+    margin: 20px auto 60px auto;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-container__block-first {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 340px 280px;
+    grid-template-areas: 'a1 a1'
+                         'a2 a3';
+}
+.grid-container__block-second {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 280px 340px;
+    grid-template-areas: 'a4 a5'
+                         'a6 a6';
+}
+.grid-container__item-first { background: url('../img/grid-1.png') center/cover; grid-area: a1 }
+.grid-container__item-second { background: url('../img/grid-4.png') center/cover; grid-area: a2 }
+.grid-container__item-third { background: url('../img/grid-5.png') center/cover; grid-area: a3 }
+.grid-container__item-four { background: url('../img/grid-2.png') center/cover; grid-area: a4 }
+.grid-container__item-five { background: url('../img/grid-3.png') center/cover; grid-area: a5 }
+.grid-container__item-six { background: url('../img/grid-6.png') center/cover; grid-area: a6 }
 
 @media only screen and (min-width: 768px) {
     
@@ -217,9 +261,7 @@ nav {
     }
 
     /* stylization of header__content elements */
-    .header__content-inner {
-        flex-direction: inherit;
-    }
+    .header__content-inner { flex-direction: inherit }
     .title {
         max-width: 620px;
         font-size: 3em;
@@ -243,7 +285,6 @@ nav {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
     }
-    
 }
 
 @media only screen and (min-width: 1180px) {
